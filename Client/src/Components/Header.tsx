@@ -26,7 +26,7 @@ const Header = ({ setViewCart }: PropsType) => {
 						className="w-full border border-primary border-r-0 pl-12 py-3 pr-3 rounded-l-md hidden md:flex focus:outline-none"
 						placeholder="search"
 					/>
-					<button className="bg-primary border border-primary text-white px-8 rounded-r-md hover:bg-transparent hover:text-primary transition md:flex hidden">
+					<button className="bg-primary border border-primary text-white px-8 rounded-r-md hover:bg-transparent hover:text-primary transition md:flex items-center hidden">
 						Search
 					</button>
 				</div>
@@ -48,7 +48,7 @@ const Header = ({ setViewCart }: PropsType) => {
 					</button>
 					<a
 						href="#"
-						className="text-center mb-2 text-gray-700 hover:text-primary transition relative"
+						className="text-center mb-[1px] text-gray-700 hover:text-primary transition relative"
 					>
 						<svg
 							className="w-6 h-6"
