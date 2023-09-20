@@ -31,11 +31,11 @@ const Product2 = ({
 			xmlSpace="preserve"
 			fill="#000000"
 		>
-			<g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+			<g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
 			<g
 				id="SVGRepo_tracerCarrier"
-				stroke-linecap="round"
-				stroke-linejoin="round"
+				strokeLinecap="round"
+				strokeLinejoin="round"
 			></g>
 			<g id="SVGRepo_iconCarrier">
 				{" "}
@@ -50,7 +50,7 @@ const Product2 = ({
 	const onAddToCart = () =>
 		dispatch({ type: REDUCER_ACTIONS.ADD, payload: { ...product, qty: 1 } });
 
-	const itemInCart = inCart ? ` -> Item in Cart: ✅` : null;
+	// const itemInCart = inCart ? ` -> Item in Cart: ✅` : null;
 	return (
 		<div className="bg-white flex flex-col justify-between shadow rounded overflow-hidden group">
 			<div className="relative">

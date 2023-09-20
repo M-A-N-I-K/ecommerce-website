@@ -12,7 +12,8 @@ const SideBar = ({ toggleFilters }: PropsType): ReactElement => {
 					toggleFilters
 						? "scale-100 opacity-100 transform-none transition-transform ease-in-out duration-500"
 						: "scale-0 opacity-0 transform-none transition-transform ease-in-out duration-500 hidden"
-				} origin-top-left absolute z-10 left-2 bg-white p-12 animate-scaleFromTopLeft`}
+				} origin-top-left absolute
+				 mt-16 z-10 left-2 md:left-36 bg-white shadow-lg p-12 animate-scaleFromTopLeft`}
 			>
 				<div>
 					<h3 className="text-xl text-gray-800 mb-3 uppercase font-medium">
