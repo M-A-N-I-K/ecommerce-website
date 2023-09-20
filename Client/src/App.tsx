@@ -10,17 +10,15 @@ import Checkout from "./Pages/Checkout";
 import "./app.css";
 
 function App() {
-	const [viewCart, setViewCart] = useState<boolean>(false);
-	const pageContent = viewCart ? <Cart /> : <Shop />;
-
 	const content = (
 		<>
 			<HashRouter>
-				<Header setViewCart={setViewCart} />
+				<Header />
 				<Navbar />
 				<BreadCrumb />
 				<Routes>
-					<Route path="/" element={pageContent} />
+					<Route path="/" element={<Shop />} />
+					<Route path="/cart" element={<Cart />} />
 					<Route path="/checkout" element={<Checkout />} />
 				</Routes>
 				<Footer />

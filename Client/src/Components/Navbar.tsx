@@ -24,7 +24,50 @@ const Navbar = () => {
 			<div className="container flex">
 				<div className="px-8 py-4 bg-primary md:flex items-center cursor-pointer relative group hidden">
 					<span className="text-white">
-						<i className="fa-solid fa-bars"></i>
+						<svg
+							version="1.1"
+							id="Capa_1"
+							className="w-4 h-4"
+							xmlns="http://www.w3.org/2000/svg"
+							xmlnsXlink="http://www.w3.org/1999/xlink"
+							viewBox="0 0 283.426 283.426"
+							xmlSpace="preserve"
+							fill="#000000"
+						>
+							<g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+							<g
+								id="SVGRepo_tracerCarrier"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+							></g>
+							<g id="SVGRepo_iconCarrier">
+								{" "}
+								<g>
+									{" "}
+									<rect
+										x="0"
+										y="40.84"
+										style={{ fill: "currentColor" }}
+										width="283.426"
+										height="47.735"
+									></rect>{" "}
+									<rect
+										x="0"
+										y="117.282"
+										style={{ fill: "currentColor" }}
+										width="283.426"
+										height="47.735"
+									></rect>{" "}
+									<rect
+										x="0"
+										y="194.851"
+										style={{ fill: "currentColor" }}
+										width="283.426"
+										height="47.735"
+									></rect>{" "}
+								</g>{" "}
+							</g>
+						</svg>
 					</span>
 
 					<span className="capitalize ml-2 text-white hidden">
@@ -51,7 +94,7 @@ const Navbar = () => {
 								alt="terrace"
 								className="w-5 h-5 object-contain"
 							/>
-							<span className="ml-6 text-gray-600 text-sm">Terarce</span>
+							<span className="ml-6 text-gray-600 text-sm">Terrace</span>
 						</a>
 						<a
 							href="#"
@@ -73,7 +116,7 @@ const Navbar = () => {
 								alt="office"
 								className="w-5 h-5 object-contain"
 							/>
-							<span className="ml-6 text-gray-600 text-sm">office</span>
+							<span className="ml-6 text-gray-600 text-sm">Office</span>
 						</a>
 						<a
 							href="#"

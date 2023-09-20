@@ -1,11 +1,7 @@
 import useCart from "../Hooks/useCart";
 import { Link } from "react-router-dom";
 
-type PropsType = {
-	setViewCart: React.Dispatch<React.SetStateAction<boolean>>;
-};
-
-const Header = ({ setViewCart }: PropsType) => {
+const Header = () => {
 	const { totalItems } = useCart();
 
 	const logo: string = new URL(`../Images/logo.svg`, import.meta.url).href;
@@ -13,9 +9,9 @@ const Header = ({ setViewCart }: PropsType) => {
 	const content = (
 		<header className="py-4 shadow-sm bg-white">
 			<div className="container flex items-center justify-between">
-				<a href="index.html">
+				<Link to="/">
 					<img src={logo} alt="Logo" className="w-32" />
-				</a>
+				</Link>
 
 				<div className="w-full max-w-xl relative flex">
 					<span className="absolute left-4 top-3 text-lg text-gray-400">
@@ -35,8 +31,7 @@ const Header = ({ setViewCart }: PropsType) => {
 
 				<div className="flex justify-center items-center space-x-4">
 					<Link
-						to="/"
-						onClick={() => setViewCart(true)}
+						to="/cart"
 						className="text-center text-gray-700 hover:text-primary transition relative"
 					>
 						<svg
