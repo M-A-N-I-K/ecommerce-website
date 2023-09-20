@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Navbar = () => {
 	const sofa: string = new URL(`../Images/icons/sofa.svg`, import.meta.url)
 		.href;
@@ -102,37 +104,37 @@ const Navbar = () => {
 
 				<div className="flex items-center justify-between flex-grow md:pl-12 py-5">
 					<div className="flex items-center space-x-6 capitalize">
-						<a
-							href="../index.html"
+						<Link
+							to="/"
 							className="text-gray-200 hover:text-white transition"
 						>
 							Home
-						</a>
-						<a
-							href="pages/shop.html"
+						</Link>
+						<Link
+							to="/"
 							className="text-gray-200 hover:text-white transition"
 						>
 							Shop
-						</a>
-						<a
-							href="#"
+						</Link>
+						<Link
+							to="/"
 							className="text-gray-200 hover:text-white transition"
 						>
 							About us
-						</a>
-						<a
-							href="#"
+						</Link>
+						<Link
+							to="/"
 							className="text-gray-200 hover:text-white transition"
 						>
 							Contact us
-						</a>
+						</Link>
 					</div>
-					<a
-						href="login.html"
+					<Link
+						to="/"
 						className="text-gray-200 hover:text-white transition"
 					>
 						Login
-					</a>
+					</Link>
 				</div>
 			</div>
 		</nav>

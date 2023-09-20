@@ -3,8 +3,7 @@ import useCart from "../Hooks/useCart";
 
 const Checkout = (): ReactElement => {
 	const [confirm, setConfirm] = useState(false);
-	const { dispatch, REDUCER_ACTIONS, totalItems, totalPrice, cart } =
-		useCart();
+	const { dispatch, REDUCER_ACTIONS, totalPrice, cart } = useCart();
 
 	const onSubmitOrder = () => {
 		dispatch({ type: REDUCER_ACTIONS.SUBMIT });
