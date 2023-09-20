@@ -1,4 +1,6 @@
 import useCart from "../Hooks/useCart";
+import { Link } from "react-router-dom";
+
 type PropsType = {
 	setViewCart: React.Dispatch<React.SetStateAction<boolean>>;
 };
@@ -32,7 +34,8 @@ const Header = ({ setViewCart }: PropsType) => {
 				</div>
 
 				<div className="flex justify-center items-center space-x-4">
-					<button
+					<Link
+						to="/"
 						onClick={() => setViewCart(true)}
 						className="text-center text-gray-700 hover:text-primary transition relative"
 					>
@@ -45,7 +48,7 @@ const Header = ({ setViewCart }: PropsType) => {
 						<span className="absolute right-0 top-0 rounded-full bg-red-600 w-4 h-4 top right p-0 m-0 text-white font-mono text-sm  leading-tight text-center">
 							{totalItems}
 						</span>
-					</button>
+					</Link>
 					<a
 						href="#"
 						className="text-center mb-[1px] text-gray-700 hover:text-primary transition relative"

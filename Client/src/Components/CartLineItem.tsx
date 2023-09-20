@@ -30,6 +30,20 @@ const CartLineItem = ({
 		});
 	};
 
+	const incrementQuantity = () => {
+		dispatch({
+			type: REDUCER_ACTIONS.QUANTITY,
+			payload: { ...item, qty: item.qty + 1 },
+		});
+	};
+
+	const decrementQuantity = () => {
+		dispatch({
+			type: REDUCER_ACTIONS.QUANTITY,
+			payload: { ...item, qty: item.qty - 1 },
+		});
+	};
+
 	const onRemoveFromCart = () =>
 		dispatch({
 			type: REDUCER_ACTIONS.REMOVE,
@@ -40,7 +54,7 @@ const CartLineItem = ({
 		<div className="flex items-center hover:bg-gray-100 -mx-8 px-6 py-5">
 			<div className="flex w-2/5">
 				{/* <!-- product --> */}
-				<div className="w-20">
+				<div className="mx-4 w-20">
 					<img className="h-24" src={img} alt={item.name} />
 				</div>
 				<div className="flex flex-col justify-between ml-4 flex-grow">
@@ -56,7 +70,8 @@ const CartLineItem = ({
 			</div>
 			<div className="flex justify-center w-1/5">
 				<svg
-					className="fill-current text-gray-600 w-3"
+					onClick={decrementQuantity}
+					className="fill-current cursor-pointer text-gray-600 w-3"
 					viewBox="0 0 448 512"
 				>
 					<path d="M416 208H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h384c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z" />
@@ -69,7 +84,8 @@ const CartLineItem = ({
 				/>
 
 				<svg
-					className="fill-current text-gray-600 w-3"
+					onClick={incrementQuantity}
+					className="fill-current cursor-pointer text-gray-600 w-3"
 					viewBox="0 0 448 512"
 				>
 					<path d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z" />
