@@ -65,12 +65,15 @@ const reducer = (
 
 			if (!itemExists)
 				throw new Error("Item must exist in order to update the quantity");
-			const updatedItem: CartItemType = { ...itemExists, qty };
-			const filteredCart: CartItemType[] = state.cart.filter(
-				(item) => item.sku !== sku
-			);
-
-			return { ...state, cart: [...filteredCart, updatedItem] };
+			return {
+				...state,
+				cart: state.cart.map((item) => {
+					if (item.sku === sku) {
+						return { ...item, qty };
+					}
+					return item;
+				}),
+			};
 		}
 		case REDUCER_ACTION_TYPE.SUBMIT: {
 			return { ...state, cart: [] };
