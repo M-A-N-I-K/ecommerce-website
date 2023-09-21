@@ -9,6 +9,7 @@ import Checkout from "./Pages/Checkout";
 import "./app.css";
 import Login from "./Pages/Login";
 import Register from "./Pages/Register";
+import Home from "./Pages/Home";
 
 function App() {
 	const content = (
@@ -19,6 +20,7 @@ function App() {
 				<BreadCrumb />
 				<Routes>
 					<Route path="/" element={<Shop />} />
+					<Route path="/home" element={<Home />} />
 					<Route path="/cart" element={<Cart />} />
 					<Route path="/checkout" element={<Checkout />} />
 					<Route path="/login" element={<Login />} />

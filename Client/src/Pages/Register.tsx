@@ -9,7 +9,7 @@ const Register = (): ReactElement => {
 					Create an account
 				</h2>
 				<p className="text-gray-600 mb-6 text-sm">
-					Register for new cosutumer
+					Register for new costumer
 				</p>
 				<form action="#" method="post">
 					<div className="space-y-2">

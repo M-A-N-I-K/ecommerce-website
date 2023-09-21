@@ -148,7 +148,7 @@ const Navbar = () => {
 				<div className="flex items-center justify-between flex-grow md:pl-12 py-5">
 					<div className="flex items-center space-x-6 capitalize">
 						<Link
-							to="/"
+							to="/home"
 							className="text-gray-200 hover:text-white transition"
 						>
 							Home
@@ -176,7 +176,7 @@ const Navbar = () => {
 						to="/login"
 						className="text-gray-200 hover:text-white transition"
 					>
-						Login
+						Login/Register
 					</Link>
 				</div>
 			</div>
