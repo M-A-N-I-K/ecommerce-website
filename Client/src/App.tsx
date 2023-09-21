@@ -7,6 +7,8 @@ import BreadCrumb from "./Components/BreadCrumb";
 import Shop from "./Pages/Shop";
 import Checkout from "./Pages/Checkout";
 import "./app.css";
+import Login from "./Pages/Login";
+import Register from "./Pages/Register";
 
 function App() {
 	const content = (
@@ -19,6 +21,8 @@ function App() {
 					<Route path="/" element={<Shop />} />
 					<Route path="/cart" element={<Cart />} />
 					<Route path="/checkout" element={<Checkout />} />
+					<Route path="/login" element={<Login />} />
+					<Route path="/register" element={<Register />} />
 				</Routes>
 				<Footer />
 			</HashRouter>

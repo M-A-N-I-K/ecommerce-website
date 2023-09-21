@@ -173,7 +173,7 @@ const Navbar = () => {
 						</Link>
 					</div>
 					<Link
-						to="/"
+						to="/login"
 						className="text-gray-200 hover:text-white transition"
 					>
 						Login
