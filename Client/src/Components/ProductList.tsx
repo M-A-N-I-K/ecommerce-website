@@ -6,13 +6,15 @@ import useProducts from "../Hooks/useProducts";
 type PropsType = {
 	toggleFilters: boolean;
 	setToggleFilters: React.Dispatch<React.SetStateAction<boolean>>;
-	checked: (EventTarget & HTMLInputElement) | undefined;
+	checkedCategory: (EventTarget & HTMLInputElement) | undefined;
+	checkedRating: (EventTarget & HTMLInputElement) | undefined;
 	minPrice: number;
 	maxPrice: number;
 };
 
 const Products2 = ({
-	checked,
+	checkedCategory,
+	checkedRating,
 	toggleFilters,
 	setToggleFilters,
 	minPrice,
@@ -38,9 +40,17 @@ const Products2 = ({
 			sortedProducts.sort((a, b) => b.price - a.price);
 		}
 
-		if (checked?.checked) {
+		if (checkedCategory?.checked) {
 			sortedProducts = sortedProducts.filter(
-				(a) => a.Category === checked.value
+				(a) => a.Category === checkedCategory.value
+			);
+		}
+
+		if (checkedRating?.checked) {
+			sortedProducts = sortedProducts.filter(
+				(a) =>
+					a.rating >= Number(checkedRating.value) &&
+					a.rating < Number(checkedRating.value) + 1
 			);
 		}
 
@@ -65,7 +75,14 @@ const Products2 = ({
 		});
 
 		setPageContent(updatedPageContent);
-	}, [sortingOption, products, checked, minPrice, maxPrice]);
+	}, [
+		sortingOption,
+		products,
+		checkedCategory,
+		checkedRating,
+		minPrice,
+		maxPrice,
+	]);
 
 	return (
 		<div className="z-0 col-span-3">

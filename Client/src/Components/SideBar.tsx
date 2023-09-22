@@ -2,7 +2,10 @@ import { ReactElement, ChangeEvent } from "react";
 
 type PropsType = {
 	toggleFilters: boolean;
-	setChecked: React.Dispatch<
+	setCheckedCategory: React.Dispatch<
+		React.SetStateAction<(EventTarget & HTMLInputElement) | undefined>
+	>;
+	setCheckedRating: React.Dispatch<
 		React.SetStateAction<(EventTarget & HTMLInputElement) | undefined>
 	>;
 	setToggleFilters: React.Dispatch<React.SetStateAction<boolean>>;
@@ -12,13 +15,18 @@ type PropsType = {
 
 const SideBar = ({
 	toggleFilters,
-	setChecked,
+	setCheckedCategory,
+	setCheckedRating,
 	setToggleFilters,
 	setMinPrice,
 	setMaxPrice,
 }: PropsType): ReactElement => {
-	const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
-		setChecked(e.target);
+	const handleChangeCategory = (e: ChangeEvent<HTMLInputElement>) => {
+		setCheckedCategory(e.target);
+		setToggleFilters(!toggleFilters);
+	};
+	const handleChangeRating = (e: ChangeEvent<HTMLInputElement>) => {
+		setCheckedRating(e.target);
 		setToggleFilters(!toggleFilters);
 	};
 	return (
@@ -29,7 +37,7 @@ const SideBar = ({
 						? "scale-100 opacity-100 transform-none transition-transform ease-in-out duration-500"
 						: "scale-0 opacity-0 transform-none transition-transform ease-in-out duration-500 hidden"
 				} origin-top-left absolute
-				 mt-16 z-10 left-2 md:left-32 bg-white shadow-lg p-12 animate-scaleFromTopLeft`}
+				 mt-16 z-10 left-2 md:left-32 bg-white shadow-lg p-8 animate-scaleFromTopLeft`}
 			>
 				<div>
 					<h3 className="text-xl text-gray-800 mb-3 uppercase font-medium">
@@ -39,7 +47,7 @@ const SideBar = ({
 						<div className="flex items-center">
 							<input
 								type="checkbox"
-								onChange={handleChange}
+								onChange={handleChangeCategory}
 								name="cat-1"
 								id="cat-1"
 								value="Bedroom"
@@ -54,7 +62,7 @@ const SideBar = ({
 						</div>
 						<div className="flex items-center">
 							<input
-								onChange={handleChange}
+								onChange={handleChangeCategory}
 								type="checkbox"
 								name="cat-2"
 								id="cat-2"
@@ -71,7 +79,7 @@ const SideBar = ({
 						<div className="flex items-center">
 							<input
 								type="checkbox"
-								onChange={handleChange}
+								onChange={handleChangeCategory}
 								name="cat-3"
 								id="cat-3"
 								value="Office"
@@ -87,7 +95,7 @@ const SideBar = ({
 						<div className="flex items-center">
 							<input
 								type="checkbox"
-								onChange={handleChange}
+								onChange={handleChangeCategory}
 								name="cat-4"
 								id="cat-4"
 								value="Outdoor"
@@ -124,6 +132,88 @@ const SideBar = ({
 							placeholder="20000"
 							className="w-full border-gray-300 focus:border-primary rounded focus:ring-0 px-3 py-1 text-gray-600 shadow-sm"
 						/>
+					</div>
+				</div>
+				<div>
+					<h3 className="mt-2 text-xl text-gray-800 mb-3 uppercase font-medium">
+						Ratings
+					</h3>
+					<div className="space-y-2">
+						<div className="flex items-center">
+							<input
+								type="checkbox"
+								onChange={handleChangeCategory}
+								id="cat-1"
+								value="0"
+								className="text-primary focus:ring-0 rounded-sm cursor-pointer"
+							/>
+							<label
+								htmlFor="cat-1"
+								className="text-gray-600 ml-3 cusror-pointer"
+							>
+								&#60; 1.0
+							</label>
+						</div>
+						<div className="flex items-center">
+							<input
+								type="checkbox"
+								onChange={handleChangeRating}
+								id="cat-1"
+								value="1.0"
+								className="text-primary focus:ring-0 rounded-sm cursor-pointer"
+							/>
+							<label
+								htmlFor="cat-1"
+								className="text-gray-600 ml-3 cusror-pointer"
+							>
+								1.0 - 2.0
+							</label>
+						</div>
+						<div className="flex items-center">
+							<input
+								onChange={handleChangeRating}
+								type="checkbox"
+								id="cat-2"
+								value="2.0"
+								className="text-primary focus:ring-0 rounded-sm cursor-pointer"
+							/>
+							<label
+								htmlFor="cat-2"
+								className="text-gray-600 ml-3 cusror-pointer"
+							>
+								2.0 - 3.0
+							</label>
+						</div>
+						<div className="flex items-center">
+							<input
+								type="checkbox"
+								onChange={handleChangeRating}
+								id="cat-3"
+								value="3.0"
+								className="text-primary focus:ring-0 rounded-sm cursor-pointer"
+							/>
+							<label
+								htmlFor="cat-3"
+								className="text-gray-600 ml-3 cusror-pointer"
+							>
+								3.0 - 4.0
+							</label>
+						</div>
+						<div className="flex items-center">
+							<input
+								type="checkbox"
+								onChange={handleChangeRating}
+								id="cat-4"
+								value="4.0"
+								className="text-primary focus:ring-0 rounded-sm cursor-pointer"
+							/>
+							<label
+								htmlFor="cat-4"
+								className="text-gray-600 ml-3 cusror-pointer"
+							>
+								&gt; 4.0
+							</label>
+						</div>
 					</div>
 				</div>
 			</div>
