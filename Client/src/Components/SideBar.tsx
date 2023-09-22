@@ -1,10 +1,22 @@
-import { ReactElement } from "react";
+import { ReactElement, ChangeEvent } from "react";
 
 type PropsType = {
 	toggleFilters: boolean;
+	setChecked: React.Dispatch<
+		React.SetStateAction<(EventTarget & HTMLInputElement) | undefined>
+	>;
+	setToggleFilters: React.Dispatch<React.SetStateAction<boolean>>;
 };
 
-const SideBar = ({ toggleFilters }: PropsType): ReactElement => {
+const SideBar = ({
+	toggleFilters,
+	setChecked,
+	setToggleFilters,
+}: PropsType): ReactElement => {
+	const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
+		setChecked(e.target);
+		setToggleFilters(!toggleFilters);
+	};
 	return (
 		<>
 			<div
@@ -23,8 +35,10 @@ const SideBar = ({ toggleFilters }: PropsType): ReactElement => {
 						<div className="flex items-center">
 							<input
 								type="checkbox"
+								onChange={handleChange}
 								name="cat-1"
 								id="cat-1"
+								value="Bedroom"
 								className="text-primary focus:ring-0 rounded-sm cursor-pointer"
 							/>
 							<label
@@ -33,13 +47,14 @@ const SideBar = ({ toggleFilters }: PropsType): ReactElement => {
 							>
 								Bedroom
 							</label>
-							<div className="ml-auto text-gray-600 text-sm">(15)</div>
 						</div>
 						<div className="flex items-center">
 							<input
+								onChange={handleChange}
 								type="checkbox"
 								name="cat-2"
 								id="cat-2"
+								value="Sofa"
 								className="text-primary focus:ring-0 rounded-sm cursor-pointer"
 							/>
 							<label
@@ -48,13 +63,14 @@ const SideBar = ({ toggleFilters }: PropsType): ReactElement => {
 							>
 								Sofa
 							</label>
-							<div className="ml-auto text-gray-600 text-sm">(9)</div>
 						</div>
 						<div className="flex items-center">
 							<input
 								type="checkbox"
+								onChange={handleChange}
 								name="cat-3"
 								id="cat-3"
+								value="Office"
 								className="text-primary focus:ring-0 rounded-sm cursor-pointer"
 							/>
 							<label
@@ -63,13 +79,14 @@ const SideBar = ({ toggleFilters }: PropsType): ReactElement => {
 							>
 								Office
 							</label>
-							<div className="ml-auto text-gray-600 text-sm">(21)</div>
 						</div>
 						<div className="flex items-center">
 							<input
 								type="checkbox"
+								onChange={handleChange}
 								name="cat-4"
 								id="cat-4"
+								value="Outdoor"
 								className="text-primary focus:ring-0 rounded-sm cursor-pointer"
 							/>
 							<label
@@ -78,7 +95,6 @@ const SideBar = ({ toggleFilters }: PropsType): ReactElement => {
 							>
 								Outdoor
 							</label>
-							<div className="ml-auto text-gray-600 text-sm">(10)</div>
 						</div>
 					</div>
 				</div>

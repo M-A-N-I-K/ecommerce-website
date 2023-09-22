@@ -44,6 +44,24 @@ const initState: ProductType[] = [
 		price: 29.99,
 		Category: "Office",
 	},
+	{
+		sku: "product7",
+		name: "Pool Side Chairs",
+		price: 49.99,
+		Category: "Outdoor",
+	},
+	{
+		sku: "product8",
+		name: "Single Chair",
+		price: 17.99,
+		Category: "Outdoor",
+	},
+	{
+		sku: "product9",
+		name: "Single Lounge Chair",
+		price: 19.99,
+		Category: "Office",
+	},
 ];
 
 export type useProductContextType = { products: ProductType[] };

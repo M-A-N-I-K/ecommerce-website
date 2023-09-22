@@ -35,6 +35,24 @@
             "name": "Single Chair",
             "price": 29.99,
             "Category": "Office"
+        },
+        {
+            "sku": "product7",
+            "name": "Single Chair",
+            "price": 29.99,
+            "Category": "Office"
+        },
+        {
+            "sku": "product8",
+            "name": "Single Chair",
+            "price": 29.99,
+            "Category": "Office"
+        },
+        {
+            "sku": "product9",
+            "name": "Single Chair",
+            "price": 29.99,
+            "Category": "Office"
         }
     ]
 }

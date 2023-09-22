@@ -6,9 +6,11 @@ import useProducts from "../Hooks/useProducts";
 type PropsType = {
 	toggleFilters: boolean;
 	setToggleFilters: React.Dispatch<React.SetStateAction<boolean>>;
+	checked: (EventTarget & HTMLInputElement) | undefined;
 };
 
 const Products2 = ({
+	checked,
 	toggleFilters,
 	setToggleFilters,
 }: PropsType): ReactElement => {
@@ -24,12 +26,20 @@ const Products2 = ({
 			return;
 		}
 
-		const sortedProducts = [...products];
+		let sortedProducts = [...products];
 
 		if (sortingOption === "price-low-to-high") {
 			sortedProducts.sort((a, b) => a.price - b.price);
 		} else if (sortingOption === "price-high-to-low") {
 			sortedProducts.sort((a, b) => b.price - a.price);
+		}
+		console.log(checked);
+		console.log(checked?.checked);
+		console.log(checked);
+		if (checked?.checked) {
+			sortedProducts = sortedProducts.filter(
+				(a) => a.Category === checked.value
+			);
 		}
 
 		const updatedPageContent = sortedProducts.map((product) => {
@@ -47,7 +57,7 @@ const Products2 = ({
 		});
 
 		setPageContent(updatedPageContent);
-	}, [sortingOption, products]);
+	}, [sortingOption, products, checked]);
 
 	return (
 		<div className="z-0 col-span-3">
