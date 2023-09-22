@@ -103,7 +103,9 @@ const Product2 = ({
 						<span>{starSvg}</span>
 						<span>{starSvg}</span>
 					</div>
-					<div className="text-xs text-gray-500 ml-3">(150)</div>
+					<div className="text-xs text-gray-500 ml-3">
+						({product.rating})
+					</div>
 				</div>
 			</div>
 			<button

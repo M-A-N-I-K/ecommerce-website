@@ -6,12 +6,16 @@ type PropsType = {
 		React.SetStateAction<(EventTarget & HTMLInputElement) | undefined>
 	>;
 	setToggleFilters: React.Dispatch<React.SetStateAction<boolean>>;
+	setMinPrice: React.Dispatch<React.SetStateAction<number>>;
+	setMaxPrice: React.Dispatch<React.SetStateAction<number>>;
 };
 
 const SideBar = ({
 	toggleFilters,
 	setChecked,
 	setToggleFilters,
+	setMinPrice,
+	setMaxPrice,
 }: PropsType): ReactElement => {
 	const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
 		setChecked(e.target);
@@ -105,19 +109,20 @@ const SideBar = ({
 					</h3>
 					<div className="mt-4 flex items-center">
 						<input
-							type="text"
-							name="min"
+							type="number"
+							onChange={(e) => setMinPrice(JSON.parse(e.target.value))}
 							id="min"
+							placeholder="0"
 							className="w-full border-gray-300 focus:border-primary rounded focus:ring-0 px-3 py-1 text-gray-600 shadow-sm"
-							placeholder="min"
 						/>
 						<span className="mx-3 text-gray-500">-</span>
 						<input
-							type="text"
+							type="number"
+							onChange={(e) => setMaxPrice(JSON.parse(e.target.value))}
 							name="max"
 							id="max"
+							placeholder="20000"
 							className="w-full border-gray-300 focus:border-primary rounded focus:ring-0 px-3 py-1 text-gray-600 shadow-sm"
-							placeholder="max"
 						/>
 					</div>
 				</div>

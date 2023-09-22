@@ -7,12 +7,16 @@ type PropsType = {
 	toggleFilters: boolean;
 	setToggleFilters: React.Dispatch<React.SetStateAction<boolean>>;
 	checked: (EventTarget & HTMLInputElement) | undefined;
+	minPrice: number;
+	maxPrice: number;
 };
 
 const Products2 = ({
 	checked,
 	toggleFilters,
 	setToggleFilters,
+	minPrice,
+	maxPrice,
 }: PropsType): ReactElement => {
 	const { dispatch, REDUCER_ACTIONS, cart } = useCart();
 	const { products } = useProducts();
@@ -33,12 +37,16 @@ const Products2 = ({
 		} else if (sortingOption === "price-high-to-low") {
 			sortedProducts.sort((a, b) => b.price - a.price);
 		}
-		console.log(checked);
-		console.log(checked?.checked);
-		console.log(checked);
+
 		if (checked?.checked) {
 			sortedProducts = sortedProducts.filter(
 				(a) => a.Category === checked.value
+			);
+		}
+
+		if (minPrice || maxPrice) {
+			sortedProducts = sortedProducts.filter(
+				(a) => a.price >= minPrice && a.price <= maxPrice
 			);
 		}
 
@@ -57,7 +65,7 @@ const Products2 = ({
 		});
 
 		setPageContent(updatedPageContent);
-	}, [sortingOption, products, checked]);
+	}, [sortingOption, products, checked, minPrice, maxPrice]);
 
 	return (
 		<div className="z-0 col-span-3">
