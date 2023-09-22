@@ -1,6 +1,8 @@
 import { ProductType } from "../Context/ProductsProvider";
 import { ReducerActionType, ReducerAction } from "../Context/CartProvider";
 import { ReactElement, memo } from "react";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 type PropsType = {
 	product: ProductType;
@@ -47,10 +49,22 @@ const Product2 = ({
 		</svg>
 	);
 
-	const onAddToCart = () =>
+	const onAddToCart = () => {
 		dispatch({ type: REDUCER_ACTIONS.ADD, payload: { ...product, qty: 1 } });
+		if (!inCart) {
+			toast("Item added in cart ✅", {
+				position: "top-center",
+				autoClose: 3000,
+				hideProgressBar: false,
+				closeOnClick: true,
+				pauseOnHover: true,
+				draggable: true,
+				progress: undefined,
+				theme: "light",
+			});
+		}
+	};
 
-	// const itemInCart = inCart ? ` -> Item in Cart: ✅` : null;
 	return (
 		<div className="bg-white flex flex-col justify-between shadow rounded overflow-hidden group">
 			<div className="relative">
@@ -114,6 +128,18 @@ const Product2 = ({
 			>
 				Add to cart
 			</button>
+			<ToastContainer
+				position="top-center"
+				autoClose={33000}
+				hideProgressBar={false}
+				newestOnTop={false}
+				closeOnClick
+				rtl={false}
+				pauseOnFocusLoss
+				draggable
+				pauseOnHover
+				theme="light"
+			/>
 		</div>
 	);
 };

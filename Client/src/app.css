@@ -11,6 +11,12 @@
 	/* 2 */
 }
 
+.Toastify__progress-bar-theme--light {
+	--tw-bg-opacity: 1;
+	background-color: rgb(253 61 87 / var(--tw-bg-opacity));
+	color: rgb(253 61 87 / var(--tw-bg-opacity));
+}
+
 ::before,
 ::after {
 	--tw-content: "";
