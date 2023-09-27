@@ -1,19 +1,19 @@
 import { HashRouter, Routes, Route } from "react-router-dom";
 import { lazy, Suspense } from "react";
 
+const Home = lazy(() => import("./Pages/Home"));
 const Cart = lazy(() => import("./Pages/Cart"));
 const Shop = lazy(() => import("./Pages/Shop"));
 const Checkout = lazy(() => import("./Pages/Checkout"));
+const Login = lazy(() => import("./Pages/Login"));
+const Register = lazy(() => import("./Pages/Register"));
 
 import Footer from "./Components/Footer";
 import Header from "./Components/Header";
 import Navbar from "./Components/Navbar";
 import BreadCrumb from "./Components/BreadCrumb";
-import "./app.css";
-import Login from "./Pages/Login";
-import Register from "./Pages/Register";
-import Home from "./Pages/Home";
 import Loader from "./Utils/Loader";
+import "./app.css";
 
 function App() {
 	const content = (
@@ -31,7 +31,14 @@ function App() {
 							</Suspense>
 						}
 					/>
-					<Route path="/home" element={<Home />} />
+					<Route
+						path="/home"
+						element={
+							<Suspense fallback={<Loader />}>
+								<Home />
+							</Suspense>
+						}
+					/>
 					<Route
 						path="/cart"
 						element={
@@ -48,8 +55,22 @@ function App() {
 							</Suspense>
 						}
 					/>
-					<Route path="/login" element={<Login />} />
-					<Route path="/register" element={<Register />} />
+					<Route
+						path="/login"
+						element={
+							<Suspense fallback={<Loader />}>
+								<Login />
+							</Suspense>
+						}
+					/>
+					<Route
+						path="/register"
+						element={
+							<Suspense fallback={<Loader />}>
+								<Register />
+							</Suspense>
+						}
+					/>
 				</Routes>
 				<Footer />
 			</HashRouter>
