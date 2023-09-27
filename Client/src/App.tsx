@@ -1,15 +1,19 @@
 import { HashRouter, Routes, Route } from "react-router-dom";
-import Cart from "./Pages/Cart";
+import { lazy, Suspense } from "react";
+
+const Cart = lazy(() => import("./Pages/Cart"));
+const Shop = lazy(() => import("./Pages/Shop"));
+const Checkout = lazy(() => import("./Pages/Checkout"));
+
 import Footer from "./Components/Footer";
 import Header from "./Components/Header";
 import Navbar from "./Components/Navbar";
 import BreadCrumb from "./Components/BreadCrumb";
-import Shop from "./Pages/Shop";
-import Checkout from "./Pages/Checkout";
 import "./app.css";
 import Login from "./Pages/Login";
 import Register from "./Pages/Register";
 import Home from "./Pages/Home";
+import Loader from "./Utils/Loader";
 
 function App() {
 	const content = (
@@ -19,10 +23,31 @@ function App() {
 				<Navbar />
 				<BreadCrumb />
 				<Routes>
-					<Route path="/" element={<Shop />} />
+					<Route
+						path="/"
+						element={
+							<Suspense fallback={<Loader />}>
+								<Shop />
+							</Suspense>
+						}
+					/>
 					<Route path="/home" element={<Home />} />
-					<Route path="/cart" element={<Cart />} />
-					<Route path="/checkout" element={<Checkout />} />
+					<Route
+						path="/cart"
+						element={
+							<Suspense fallback={<Loader />}>
+								<Cart />
+							</Suspense>
+						}
+					/>
+					<Route
+						path="/checkout"
+						element={
+							<Suspense fallback={<Loader />}>
+								<Checkout />
+							</Suspense>
+						}
+					/>
 					<Route path="/login" element={<Login />} />
 					<Route path="/register" element={<Register />} />
 				</Routes>
