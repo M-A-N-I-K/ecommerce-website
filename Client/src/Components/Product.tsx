@@ -66,7 +66,7 @@ const Product2 = ({
 	};
 
 	return (
-		<div className="bg-white flex flex-col justify-between shadow rounded overflow-hidden group">
+		<div className="bg-gray-800 flex flex-col justify-between shadow rounded overflow-hidden group">
 			<div className="relative">
 				<img src={img} alt={product.name} className="w-full" />
 				<div
@@ -75,14 +75,14 @@ const Product2 = ({
 				>
 					<a
 						href="#"
-						className="text-white text-lg w-9 h-8 rounded-full bg-primary flex items-center justify-center hover:bg-gray-800 transition"
+						className="text-gray-100 text-lg w-9 h-8 rounded-full bg-gray-100 flex items-center justify-center hover:bg-gray-800 transition"
 						title="view product"
 					>
 						<i className="fa-solid fa-magnifying-glass"></i>
 					</a>
 					<a
 						href="#"
-						className="text-white text-lg w-9 h-8 rounded-full bg-primary flex items-center justify-center hover:bg-gray-800 transition"
+						className="text-gray-100 text-lg w-9 h-8 rounded-full bg-gray-100 flex items-center justify-center hover:bg-gray-800 transition"
 						title="add to wishlist"
 					>
 						<i className="fa-solid fa-heart"></i>
@@ -91,12 +91,12 @@ const Product2 = ({
 			</div>
 			<div className="pt-4 pb-3 px-4">
 				<a href="#">
-					<h4 className="uppercase font-medium text-sm md:text-xl mb-2 text-gray-800 hover:text-primary transition">
+					<h4 className="uppercase font-medium text-sm md:text-xl mb-2 text-gray-800 hover:text-gray-100 transition">
 						{product.name}
 					</h4>
 				</a>
 				<div className="flex items-baseline mb-1 space-x-2">
-					<p className="text-sm md:text-xl text-primary font-semibold">
+					<p className="text-sm md:text-xl text-gray-100 font-semibold">
 						{new Intl.NumberFormat("en-US", {
 							style: "currency",
 							currency: "USD",
@@ -124,7 +124,7 @@ const Product2 = ({
 			</div>
 			<button
 				onClick={onAddToCart}
-				className="block w-full py-1 text-center text-white bg-primary border border-primary rounded-b hover:bg-transparent hover:text-primary transition"
+				className="block w-full py-1 text-center hover:bg-gray-200 border border-gray-100 rounded-b bg-gray-50 text-gray-800 transition"
 			>
 				Add to cart
 			</button>

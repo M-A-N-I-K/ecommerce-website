@@ -7,7 +7,7 @@ const Header = () => {
 	const logo: string = new URL(`../Images/logo.svg`, import.meta.url).href;
 
 	const content = (
-		<header className="py-4 shadow-sm bg-white">
+		<header className="py-4 shadow-sm bg-black">
 			<div className="container flex items-center justify-between">
 				<Link to="/">
 					<img src={logo} alt="Logo" className="w-32" />
@@ -24,7 +24,7 @@ const Header = () => {
 						className="w-full border border-primary border-r-0 pl-12 py-3 pr-3 rounded-l-md hidden md:flex focus:outline-none"
 						placeholder="search"
 					/>
-					<button className="bg-primary border border-primary text-white px-8 rounded-r-md hover:bg-transparent hover:text-primary transition md:flex items-center hidden">
+					<button className="hover:bg-primary border border-primary text-white px-8 rounded-r-md bg-transparent transition md:flex items-center hidden">
 						Search
 					</button>
 				</div>
@@ -46,17 +46,16 @@ const Header = () => {
 					</Link>
 					<a
 						href="#"
-						className="text-center mb-[1px] text-gray-700 hover:text-primary transition relative"
+						className="text-center mb-[1px] text-gray-700 hover:text-gray-600 transition relative"
 					>
 						<svg
-							className="w-6 h-6"
+							className="w-6 h-6 fill-current"
 							version="1.1"
 							id="Capa_1"
 							xmlns="http://www.w3.org/2000/svg"
 							xmlnsXlink="http://www.w3.org/1999/xlink"
 							viewBox="0 0 60.671 60.671"
 							xmlSpace="preserve"
-							fill="#000000"
 						>
 							<g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
 							<g
@@ -71,16 +70,12 @@ const Header = () => {
 									<g>
 										{" "}
 										<ellipse
-											style={{ fill: "#010002" }}
 											cx="30.336"
 											cy="12.097"
 											rx="11.997"
 											ry="12.097"
 										></ellipse>{" "}
-										<path
-											style={{ fill: "#010002" }}
-											d="M35.64,30.079H25.031c-7.021,0-12.714,5.739-12.714,12.821v17.771h36.037V42.9 C48.354,35.818,42.661,30.079,35.64,30.079z"
-										></path>{" "}
+										<path d="M35.64,30.079H25.031c-7.021,0-12.714,5.739-12.714,12.821v17.771h36.037V42.9 C48.354,35.818,42.661,30.079,35.64,30.079z"></path>{" "}
 									</g>{" "}
 								</g>{" "}
 							</g>

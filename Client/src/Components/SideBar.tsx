@@ -37,10 +37,10 @@ const SideBar = ({
 						? "scale-100 opacity-100 transform-none transition-transform ease-in-out duration-500"
 						: "scale-0 opacity-0 transform-none transition-transform ease-in-out duration-500 hidden"
 				} origin-top-left absolute
-				 mt-16 z-10 left-2 md:left-32 bg-white shadow-lg p-8 animate-scaleFromTopLeft`}
+				 mt-16 z-10 left-2 md:left-32 bg-gray-700 shadow-lg p-8 animate-scaleFromTopLeft`}
 			>
 				<div>
-					<h3 className="text-xl text-gray-800 mb-3 uppercase font-medium">
+					<h3 className="text-xl text-white mb-3 uppercase font-medium">
 						Categories
 					</h3>
 					<div className="space-y-2">
@@ -51,11 +51,11 @@ const SideBar = ({
 								name="cat-1"
 								id="cat-1"
 								value="Bedroom"
-								className="text-primary focus:ring-0 rounded-sm cursor-pointer"
+								className="text-gray-50 focus:ring-0 rounded-sm cursor-pointer"
 							/>
 							<label
 								htmlFor="cat-1"
-								className="text-gray-600 ml-3 cusror-pointer"
+								className="text-gray-50 ml-3 cusror-pointer"
 							>
 								Bedroom
 							</label>
@@ -67,11 +67,11 @@ const SideBar = ({
 								name="cat-2"
 								id="cat-2"
 								value="Sofa"
-								className="text-primary focus:ring-0 rounded-sm cursor-pointer"
+								className="text-gray-100 focus:ring-0 rounded-sm cursor-pointer"
 							/>
 							<label
 								htmlFor="cat-2"
-								className="text-gray-600 ml-3 cusror-pointer"
+								className="text-gray-50 ml-3 cusror-pointer"
 							>
 								Sofa
 							</label>
@@ -83,11 +83,11 @@ const SideBar = ({
 								name="cat-3"
 								id="cat-3"
 								value="Office"
-								className="text-primary focus:ring-0 rounded-sm cursor-pointer"
+								className="text-gray-100 focus:ring-0 rounded-sm cursor-pointer"
 							/>
 							<label
 								htmlFor="cat-3"
-								className="text-gray-600 ml-3 cusror-pointer"
+								className="text-gray-50 ml-3 cusror-pointer"
 							>
 								Office
 							</label>
@@ -99,11 +99,11 @@ const SideBar = ({
 								name="cat-4"
 								id="cat-4"
 								value="Outdoor"
-								className="text-primary focus:ring-0 rounded-sm cursor-pointer"
+								className="text-gray-100 focus:ring-0 rounded-sm cursor-pointer"
 							/>
 							<label
 								htmlFor="cat-4"
-								className="text-gray-600 ml-3 cusror-pointer"
+								className="text-gray-50 ml-3 cusror-pointer"
 							>
 								Outdoor
 							</label>
@@ -112,7 +112,7 @@ const SideBar = ({
 				</div>
 
 				<div className="pt-4">
-					<h3 className="text-xl text-gray-800 mb-3 uppercase font-medium">
+					<h3 className="text-xl text-white mb-3 uppercase font-medium">
 						Price
 					</h3>
 					<div className="mt-4 flex items-center">
@@ -121,7 +121,7 @@ const SideBar = ({
 							onChange={(e) => setMinPrice(JSON.parse(e.target.value))}
 							id="min"
 							placeholder="0"
-							className="w-full border-gray-300 focus:border-primary rounded focus:ring-0 px-3 py-1 text-gray-600 shadow-sm"
+							className="w-full border-gray-300 focus:border-gray-100 rounded focus:ring-0 px-3 py-1 text-gray-50 shadow-sm"
 						/>
 						<span className="mx-3 text-gray-500">-</span>
 						<input
@@ -130,12 +130,12 @@ const SideBar = ({
 							name="max"
 							id="max"
 							placeholder="20000"
-							className="w-full border-gray-300 focus:border-primary rounded focus:ring-0 px-3 py-1 text-gray-600 shadow-sm"
+							className="w-full border-gray-300 focus:border-gray-100 rounded focus:ring-0 px-3 py-1 text-gray-50 shadow-sm"
 						/>
 					</div>
 				</div>
 				<div>
-					<h3 className="mt-2 text-xl text-gray-800 mb-3 uppercase font-medium">
+					<h3 className="mt-2 text-xl text-white mb-3 uppercase font-medium">
 						Ratings
 					</h3>
 					<div className="space-y-2">
@@ -145,11 +145,11 @@ const SideBar = ({
 								onChange={handleChangeCategory}
 								id="cat-1"
 								value="0"
-								className="text-primary focus:ring-0 rounded-sm cursor-pointer"
+								className="text-gray-100 focus:ring-0 rounded-sm cursor-pointer"
 							/>
 							<label
 								htmlFor="cat-1"
-								className="text-gray-600 ml-3 cusror-pointer"
+								className="text-gray-50 ml-3 cusror-pointer"
 							>
 								&#60; 1.0
 							</label>
@@ -160,11 +160,11 @@ const SideBar = ({
 								onChange={handleChangeRating}
 								id="cat-1"
 								value="1.0"
-								className="text-primary focus:ring-0 rounded-sm cursor-pointer"
+								className="text-gray-100 focus:ring-0 rounded-sm cursor-pointer"
 							/>
 							<label
 								htmlFor="cat-1"
-								className="text-gray-600 ml-3 cusror-pointer"
+								className="text-gray-50 ml-3 cusror-pointer"
 							>
 								1.0 - 2.0
 							</label>
@@ -175,11 +175,11 @@ const SideBar = ({
 								type="checkbox"
 								id="cat-2"
 								value="2.0"
-								className="text-primary focus:ring-0 rounded-sm cursor-pointer"
+								className="text-gray-100 focus:ring-0 rounded-sm cursor-pointer"
 							/>
 							<label
 								htmlFor="cat-2"
-								className="text-gray-600 ml-3 cusror-pointer"
+								className="text-gray-50 ml-3 cusror-pointer"
 							>
 								2.0 - 3.0
 							</label>
@@ -190,11 +190,11 @@ const SideBar = ({
 								onChange={handleChangeRating}
 								id="cat-3"
 								value="3.0"
-								className="text-primary focus:ring-0 rounded-sm cursor-pointer"
+								className="text-gray-100 focus:ring-0 rounded-sm cursor-pointer"
 							/>
 							<label
 								htmlFor="cat-3"
-								className="text-gray-600 ml-3 cusror-pointer"
+								className="text-gray-50 ml-3 cusror-pointer"
 							>
 								3.0 - 4.0
 							</label>
@@ -205,11 +205,11 @@ const SideBar = ({
 								onChange={handleChangeRating}
 								id="cat-4"
 								value="4.0"
-								className="text-primary focus:ring-0 rounded-sm cursor-pointer"
+								className="text-gray-100 focus:ring-0 rounded-sm cursor-pointer"
 							/>
 							<label
 								htmlFor="cat-4"
-								className="text-gray-600 ml-3 cusror-pointer"
+								className="text-gray-50 ml-3 cusror-pointer"
 							>
 								&gt; 4.0
 							</label>

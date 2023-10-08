@@ -27,7 +27,7 @@ const Categories = (): ReactElement => {
 	).href;
 	return (
 		<div className="container py-16">
-			<h2 className="text-2xl font-medium text-gray-800 uppercase mb-6">
+			<h2 className="text-2xl font-medium text-gray-100 uppercase mb-6">
 				shop by category
 			</h2>
 			<div className="grid grid-cols-3 gap-3">

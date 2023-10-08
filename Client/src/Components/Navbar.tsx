@@ -22,8 +22,8 @@ const Navbar = () => {
 	return (
 		<nav className="bg-gray-800">
 			<div className="container flex">
-				<div className="px-8 py-4 bg-primary md:flex items-center cursor-pointer relative group hidden">
-					<span className="text-white">
+				<div className="px-8 py-4 z-20 bg-white md:flex items-center cursor-pointer relative group hidden">
+					<span className="text-gray-700">
 						<svg
 							version="1.1"
 							id="Capa_1"
@@ -70,10 +70,10 @@ const Navbar = () => {
 						</svg>
 					</span>
 
-					<span className="capitalize ml-2 text-white hidden">
+					<span className="capitalize ml-2 text-gray-700 hidden">
 						All Categories
 					</span>
-					<div className="absolute w-full left-0 top-full bg-white shadow-md py-3 divide-y divide-gray-300 divide-dashed opacity-0 group-hover:opacity-100 transition duration-300 invisible group-hover:visible">
+					<div className="absolute w-full left-0 top-full bg-gray-700 shadow-md py-3 divide-y divide-gray-300 divide-dashed opacity-0 group-hover:opacity-100 transition duration-300 invisible group-hover:visible">
 						<a
 							href="#"
 							className="flex items-center px-6 py-3 hover:bg-gray-100 transition"
@@ -83,7 +83,7 @@ const Navbar = () => {
 								alt="sofa"
 								className="w-5 h-5 object-contain"
 							/>
-							<span className="ml-6 text-gray-600 text-sm">Sofa</span>
+							<span className="ml-6 text-white text-sm">Sofa</span>
 						</a>
 						<a
 							href="#"
@@ -94,7 +94,7 @@ const Navbar = () => {
 								alt="terrace"
 								className="w-5 h-5 object-contain"
 							/>
-							<span className="ml-6 text-gray-600 text-sm">Terrace</span>
+							<span className="ml-6 text-white text-sm">Terrace</span>
 						</a>
 						<a
 							href="#"
@@ -105,7 +105,7 @@ const Navbar = () => {
 								alt="bed"
 								className="w-5 h-5 object-contain"
 							/>
-							<span className="ml-6 text-gray-600 text-sm">Bed</span>
+							<span className="ml-6 text-white text-sm">Bed</span>
 						</a>
 						<a
 							href="#"
@@ -116,7 +116,7 @@ const Navbar = () => {
 								alt="office"
 								className="w-5 h-5 object-contain"
 							/>
-							<span className="ml-6 text-gray-600 text-sm">Office</span>
+							<span className="ml-6 text-white text-sm">Office</span>
 						</a>
 						<a
 							href="#"
@@ -127,7 +127,7 @@ const Navbar = () => {
 								alt="outdoor"
 								className="w-5 h-5 object-contain"
 							/>
-							<span className="ml-6 text-gray-600 text-sm">Outdoor</span>
+							<span className="ml-6 text-white text-sm">Outdoor</span>
 						</a>
 						<a
 							href="#"
@@ -138,9 +138,7 @@ const Navbar = () => {
 								alt="Mattress"
 								className="w-5 h-5 object-contain"
 							/>
-							<span className="ml-6 text-gray-600 text-sm">
-								Mattress
-							</span>
+							<span className="ml-6 text-white text-sm">Mattress</span>
 						</a>
 					</div>
 				</div>
@@ -149,32 +147,32 @@ const Navbar = () => {
 					<div className="flex items-center space-x-6 capitalize">
 						<Link
 							to="/home"
-							className="text-gray-200 text-xs md:text-base hover:text-white transition"
+							className="text-gray-200 text-xs md:text-base hover:text-gray-700 transition"
 						>
 							Home
 						</Link>
 						<Link
 							to="/"
-							className="text-gray-200 text-xs md:text-base hover:text-white transition"
+							className="text-gray-200 text-xs md:text-base hover:text-gray-700 transition"
 						>
 							Shop
 						</Link>
 						<Link
 							to="/"
-							className="text-gray-200 text-xs md:text-base hover:text-white transition"
+							className="text-gray-200 text-xs md:text-base hover:text-gray-700 transition"
 						>
 							About us
 						</Link>
 						<Link
 							to="/"
-							className="text-gray-200 text-xs md:text-base hover:text-white transition"
+							className="text-gray-200 text-xs md:text-base hover:text-gray-700 transition"
 						>
 							Contact us
 						</Link>
 					</div>
 					<Link
 						to="/login"
-						className="text-gray-200 text-xs md:text-base hover:text-white transition"
+						className="text-gray-200 text-xs md:text-base hover:text-gray-700 transition"
 					>
 						Login/Register
 					</Link>

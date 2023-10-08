@@ -8,42 +8,39 @@ const Register = (): ReactElement => {
 				<h2 className="text-2xl uppercase font-medium mb-1">
 					Create an account
 				</h2>
-				<p className="text-gray-600 mb-6 text-sm">
+				<p className="text-gray-50 mb-6 text-sm">
 					Register for new costumer
 				</p>
 				<form action="#" method="post">
 					<div className="space-y-2">
 						<div>
-							<label htmlFor="name" className="text-gray-600 mb-2 block">
+							<label htmlFor="name" className="text-gray-50 mb-2 block">
 								Full Name
 							</label>
 							<input
 								type="text"
 								name="name"
 								id="name"
-								className="block w-full border border-gray-300 px-4 py-3 text-gray-600 text-sm rounded focus:ring-0 focus:border-primary placeholder-gray-400"
+								className="block w-full border border-gray-300 px-4 py-3 text-gray-50 text-sm rounded focus:ring-0 focus:border-primary placeholder-gray-400"
 								placeholder="John Doe"
 							/>
 						</div>
 						<div>
-							<label
-								htmlFor="email"
-								className="text-gray-600 mb-2 block"
-							>
+							<label htmlFor="email" className="text-gray-50 mb-2 block">
 								Email address
 							</label>
 							<input
 								type="email"
 								name="email"
 								id="email"
-								className="block w-full border border-gray-300 px-4 py-3 text-gray-600 text-sm rounded focus:ring-0 focus:border-primary placeholder-gray-400"
+								className="block w-full border border-gray-300 px-4 py-3 text-gray-50 text-sm rounded focus:ring-0 focus:border-primary placeholder-gray-400"
 								placeholder="johndoe45@gmail.com"
 							/>
 						</div>
 						<div>
 							<label
 								htmlFor="password"
-								className="text-gray-600 mb-2 block"
+								className="text-gray-50 mb-2 block"
 							>
 								Password
 							</label>
@@ -51,14 +48,14 @@ const Register = (): ReactElement => {
 								type="password"
 								name="password"
 								id="password"
-								className="block w-full border border-gray-300 px-4 py-3 text-gray-600 text-sm rounded focus:ring-0 focus:border-primary placeholder-gray-400"
+								className="block w-full border border-gray-300 px-4 py-3 text-gray-50 text-sm rounded focus:ring-0 focus:border-primary placeholder-gray-400"
 								placeholder="*******"
 							/>
 						</div>
 						<div>
 							<label
 								htmlFor="confirm"
-								className="text-gray-600 mb-2 block"
+								className="text-gray-50 mb-2 block"
 							>
 								Confirm password
 							</label>
@@ -66,7 +63,7 @@ const Register = (): ReactElement => {
 								type="password"
 								name="confirm"
 								id="confirm"
-								className="block w-full border border-gray-300 px-4 py-3 text-gray-600 text-sm rounded focus:ring-0 focus:border-primary placeholder-gray-400"
+								className="block w-full border border-gray-300 px-4 py-3 text-gray-50 text-sm rounded focus:ring-0 focus:border-primary placeholder-gray-400"
 								placeholder="*******"
 							/>
 						</div>
@@ -81,7 +78,7 @@ const Register = (): ReactElement => {
 							/>
 							<label
 								htmlFor="aggrement"
-								className="text-gray-600 ml-3 cursor-pointer"
+								className="text-gray-50 ml-3 cursor-pointer"
 							>
 								I have read and agree to the{" "}
 								<a href="#" className="text-primary">
@@ -93,14 +90,14 @@ const Register = (): ReactElement => {
 					<div className="mt-4">
 						<button
 							type="submit"
-							className="block w-full py-2 text-center text-primary bg-primary border border-primary rounded hover:bg-gray-50 transition uppercase font-roboto font-medium"
+							className="block w-full py-2 text-center text-primary bg-white border border-primary rounded hover:bg-gray-100 transition uppercase font-roboto font-medium"
 						>
 							Create account
 						</button>
 					</div>
 				</form>
 				<div className="mt-6 flex justify-center relative">
-					<div className="text-gray-600 uppercase px-3 bg-white z-10 relative">
+					<div className="text-gray-50 uppercase px-3 bg-gray-700 z-10 relative">
 						Or signup with
 					</div>
 					<div className="absolute left-0 top-3 w-full border-b-2 border-gray-200"></div>
@@ -120,9 +117,9 @@ const Register = (): ReactElement => {
 					</a>
 				</div>
 
-				<p className="mt-4 text-center text-gray-600">
+				<p className="mt-4 text-center text-gray-50">
 					Already have account?{" "}
-					<Link to="/login" className="text-primary">
+					<Link to="/login" className="text-gray-300">
 						Login now
 					</Link>
 				</p>

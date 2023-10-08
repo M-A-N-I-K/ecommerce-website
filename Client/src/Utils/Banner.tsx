@@ -21,7 +21,7 @@ const Banner = (): ReactElement => {
 				<div className="mt-12">
 					<Link
 						to="/shop"
-						className="bg-primary border border-primary text-white px-8 py-3 font-medium 
+						className="bg-primary border border-primary text-black px-8 py-3 font-medium 
                     rounded-md hover:bg-transparent hover:text-primary"
 					>
 						Shop Now

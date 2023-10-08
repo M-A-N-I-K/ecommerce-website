@@ -90,7 +90,7 @@ const Products2 = ({
 				<div className="flex gap-2">
 					<button
 						onClick={() => setToggleFilters(!toggleFilters)}
-						className="border border-primary flex items-center justify-center text-white bg-primary rounded cursor-pointer px-4 py-2"
+						className="border border-primary flex items-center justify-center text-white bg-gray-700 rounded cursor-pointer px-4 py-2"
 					>
 						Filters
 					</button>
@@ -98,7 +98,7 @@ const Products2 = ({
 				<select
 					name="sort"
 					id="sort"
-					className="w-44 text-sm ml-auto text-gray-600 py-3 px-4 border-gray-300 shadow-sm rounded focus:ring-primary focus:border-primary"
+					className="w-44 text-sm bg-gray-700 text-gray-50 ml-auto py-3 px-4 border-gray-300 shadow-sm rounded focus:ring-primary focus:border-primary"
 					onChange={(e) => setSortingOption(e.target.value)}
 				>
 					<option value="">Default sorting</option>

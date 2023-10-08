@@ -6,28 +6,25 @@ const Login = (): ReactElement => {
 		<div className="contain py-16">
 			<div className="max-w-lg mx-auto shadow-lg px-6 py-7 rounded overflow-hidden">
 				<h2 className="text-2xl uppercase font-medium mb-1">Login</h2>
-				<p className="text-gray-600 mb-6 text-sm">Welcome back customer</p>
+				<p className="text-gray-50 mb-6 text-sm">Welcome back customer</p>
 				<form action="#" method="post">
 					<div className="space-y-2">
 						<div>
-							<label
-								htmlFor="email"
-								className="text-gray-600 mb-2 block"
-							>
+							<label htmlFor="email" className="text-gray-50 mb-2 block">
 								Email address
 							</label>
 							<input
 								type="email"
 								name="email"
 								id="email"
-								className="block w-full border border-gray-300 px-4 py-3 text-gray-600 text-sm rounded focus:ring-0 focus:border-primary placeholder-gray-400"
+								className="block w-full border border-gray-300 px-4 py-3 text-gray-50 text-sm rounded focus:ring-0 focus:border-primary placeholder-gray-400"
 								placeholder="youremail@domain.com"
 							/>
 						</div>
 						<div>
 							<label
 								htmlFor="password"
-								className="text-gray-600 mb-2 block"
+								className="text-gray-50 mb-2 block"
 							>
 								Password
 							</label>
@@ -35,7 +32,7 @@ const Login = (): ReactElement => {
 								type="password"
 								name="password"
 								id="password"
-								className="block w-full border border-gray-300 px-4 py-3 text-gray-600 text-sm rounded focus:ring-0 focus:border-primary placeholder-gray-400"
+								className="block w-full border border-gray-300 px-4 py-3 text-gray-50 text-sm rounded focus:ring-0 focus:border-primary placeholder-gray-400"
 								placeholder="*******"
 							/>
 						</div>
@@ -50,7 +47,7 @@ const Login = (): ReactElement => {
 							/>
 							<label
 								htmlFor="remember"
-								className="text-gray-600 ml-3 cursor-pointer"
+								className="text-gray-50 ml-3 cursor-pointer"
 							>
 								Remember me
 							</label>
@@ -62,7 +59,7 @@ const Login = (): ReactElement => {
 					<div className="mt-4">
 						<button
 							type="submit"
-							className="block w-full py-2 text-center bg-primary border border-primary rounded text-primary transition uppercase font-roboto font-medium hover:bg-gray-50"
+							className="block w-full py-2 text-center bg-white border border-primary rounded text-primary transition uppercase font-roboto font-medium hover:bg-gray-50"
 						>
 							Login
 						</button>
@@ -70,7 +67,7 @@ const Login = (): ReactElement => {
 				</form>
 
 				<div className="mt-6 flex justify-center relative">
-					<div className="text-gray-600 uppercase px-3 bg-white z-10 relative">
+					<div className="text-gray-50 uppercase px-3 bg-gray-700 z-10 relative">
 						Or login with
 					</div>
 					<div className="absolute left-0 top-3 w-full border-b-2 border-gray-200"></div>
@@ -90,9 +87,9 @@ const Login = (): ReactElement => {
 					</a>
 				</div>
 
-				<p className="mt-4 text-center text-gray-600">
+				<p className="mt-4 text-center text-gray-50">
 					Don't have account?{" "}
-					<Link to="/register" className="text-primary">
+					<Link to="/register" className="text-gray-300">
 						Register now
 					</Link>
 				</p>
